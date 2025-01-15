@@ -5,17 +5,25 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-primary: #330066;
+  --color-primary-light: #663399;
+  --color-primary-dark: #1a0033;
+  --color-secondary: #cc3399;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer components {
+  .nav-button {
+    @apply text-white px-4 py-2 font-medium rounded-full;
+    @apply transition-all duration-200;
+    @apply hover:bg-secondary;
+  }
+  .nav-button.active {
+    @apply border-2 border-secondary;
+  }
 }
