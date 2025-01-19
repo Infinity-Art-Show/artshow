@@ -4,6 +4,10 @@ export type Story = {
   body: string;
   createdAt: string;
   thumbnailImage: string;
+  artwork: {
+    id: string;
+    artName: string;
+  }
   author: {
     userId: string;
     mainImage: string;
