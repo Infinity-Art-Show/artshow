@@ -2,6 +2,8 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import { LinkButton } from "./components/ui/link-button";
+
 export default function Home() {
   const sections = [
     {
@@ -38,7 +40,41 @@ export default function Home() {
   ];
 
   return (
-    <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      {/* Hero sections */}
+      <section className="py-12">
+        <h1 className="text-6xl font-bold mb-6">
+          Share Your Vision, Inspire, Empower Arts
+        </h1>
+        <p className="text-lg mb-8 text-center">
+          A platform for local artists to showcase and auction their creations
+          for the
+          <br />
+          benefit of British Columbia communities to appreciate and own a
+          <br />
+          masterpiece at a fair price.
+        </p>
+      </section>
+      {/* Action section */}
+      <section className="py-12">
+        <div className="mx-20 space-y-4">
+          <div className="flex items-baseline gap-4">
+            <h2 className="text-4xl font-bold">Actions</h2>
+            <p>Opportunities to get real value</p>
+          </div>
+          <p className="text-lg">
+            Get value at the right price.
+            <br />
+            You might not spend millions on a Picasso,
+            <br />
+            but many quality art pieces sell for less than in a gallery.
+          </p>
+          <LinkButton href="/auctions" variant="outline" size="md">
+            DISCOVER THE ART
+          </LinkButton>
+        </div>
+      </section>
+
       {sections.map((section, index) => (
         <div
           key={section.idx}
@@ -77,6 +113,6 @@ export default function Home() {
           </div>
         </div>
       ))}
-    </main>
+    </div>
   );
 }
