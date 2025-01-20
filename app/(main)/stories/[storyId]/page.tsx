@@ -33,7 +33,7 @@ export default async function page({
       {/* {TODO: Create breadcrumb} */}
       <p className="text-sm mb-6">Stories &gt; {story.title}</p>
       <article className="grid gap-10">
-        <div className="relative aspect-[27/10]">
+        <div className="relative aspect-[4/1]">
           <Image
             src={story.thumbnailImage}
             alt={story.title}
