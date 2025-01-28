@@ -13,7 +13,7 @@ export default function Header() {
   ];
 
   return (
-    <header className="w-full bg-primary backdrop-blur-sm border-b border-gray-200 py-3">
+    <header className="w-full bg-primary backdrop-blur-sm border-b border-gray-200 py-3 fixed">
       <div className="mx-auto px-4 md:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
