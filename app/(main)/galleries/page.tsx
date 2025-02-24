@@ -1,4 +1,7 @@
 import { Metadata } from "next";
+import Link from "next/link";
+import { galleries } from "./_mockdata";
+
 
 export const metadata: Metadata = {
   title: "Galleries | Infinity Art Show",
@@ -10,7 +13,16 @@ export default async function GalleriesPage() {
     <main className="container mx-auto px-4 py-8">
       <h1 className="text-3xl font-bold mb-6">Galleries</h1>
       <div className="min-h-[60vh]">
-        {/* Galleries content will be added here */}
+        <ul>
+          {galleries.map((artWork) => (
+            <Link
+              key={artWork.galleryId}
+              href={`./galleries/${artWork.galleryId}`}
+            >
+              <li>{artWork.name}</li>
+            </Link>
+          ))}
+        </ul>
       </div>
     </main>
   );
