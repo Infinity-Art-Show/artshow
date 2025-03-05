@@ -1,7 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import { galleries } from "./_mockdata";
-
+import { galleries } from "./_dummyData";
 
 export const metadata: Metadata = {
   title: "Galleries | Infinity Art Show",
